@@ -1,0 +1,14 @@
+@config "../tailwind.config.js";
+@import "tailwindcss";
+
+@layer base {
+  /* Enables smooth scrolling when clicking anchor links in the navbar */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Base typography and background resets to keep things crisp */
+  body {
+    @apply antialiased bg-white text-slate-900 font-sans;
+  }
+}
