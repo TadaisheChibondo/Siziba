@@ -13,7 +13,6 @@ import {
   Camera,
   Phone,
   Mail,
-  MessageCircle,
   Calendar,
   ArrowRight,
 } from "lucide-react";
@@ -131,84 +130,6 @@ const Home = () => {
   );
 };
 
-// function Hero() {
-//   const [currentSlide, setCurrentSlide] = useState(0);
-
-//   // Auto-play the slideshow every 4 seconds
-//   useEffect(() => {
-//     const timer = setInterval(() => {
-//       setCurrentSlide((prev) =>
-//         prev === slideImages.length - 1 ? 0 : prev + 1,
-//       );
-//     }, 4000);
-//     return () => clearInterval(timer);
-//   }, []);
-
-//   return (
-//     <section className="relative w-full overflow-hidden bg-slate-950">
-//       {/* Background Slideshow */}
-//       <div className="absolute inset-0 z-0">
-//         <AnimatePresence mode="popLayout">
-//           <motion.img
-//             key={currentSlide}
-//             src={slideImages[currentSlide]}
-//             initial={{ opacity: 0, scale: 1.05 }}
-//             animate={{ opacity: 0.4, scale: 1 }}
-//             exit={{ opacity: 0 }}
-//             transition={{ duration: 1.5, ease: "easeInOut" }}
-//             className="w-full h-full object-cover"
-//             alt="Abizis Services"
-//           />
-//         </AnimatePresence>
-//         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-slate-950/40" />
-//       </div>
-
-//       {/* Hero Content */}
-//       <div className="relative z-10 text-center px-4 sm:px-6 pt-24 pb-20 lg:pt-32 lg:pb-28">
-//         <motion.div
-//           initial="hidden"
-//           animate="visible"
-//           variants={fadeUp}
-//           className="max-w-4xl mx-auto"
-//         >
-//           <p className="text-sm text-vibrant font-bold tracking-widest uppercase mb-6 drop-shadow-md">
-//             Abizis Innovative Solutions
-//           </p>
-
-//           {/* The New Strong Hook */}
-//           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight drop-shadow-lg mb-8">
-//             Technology that works.
-//             <br className="hidden md:block" /> Experiences people remember.
-//           </h1>
-
-//           {/* The Expanded Subheadline */}
-//           <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
-//             AIS brings together professional ICT solutions and audio-visual
-//             production under one roof — from business infrastructure and cloud
-//             solutions to live events and media production.
-//           </p>
-
-//           {/* Dual Action Funnel */}
-//           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-//             <a
-//               href="#tech"
-//               className="w-full sm:w-auto px-8 py-3.5 rounded-md bg-white text-corporate font-bold text-lg hover:bg-slate-100 transition-all duration-300 shadow-lg hover:-translate-y-0.5"
-//             >
-//               Explore Tech
-//             </a>
-//             <a
-//               href="#media"
-//               className="w-full sm:w-auto px-8 py-3.5 rounded-md bg-vibrant text-white font-bold text-lg hover:bg-rose-700 transition-all duration-300 shadow-lg shadow-vibrant/25 hover:-translate-y-0.5"
-//             >
-//               Explore Media
-//             </a>
-//           </div>
-//         </motion.div>
-//       </div>
-//     </section>
-//   );
-// }
-
 function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -231,7 +152,6 @@ function Hero() {
             key={currentSlide}
             src={slideImages[currentSlide]}
             initial={{ opacity: 0, scale: 1.05 }}
-            // 1. Increased opacity so the image becomes a major visual element
             animate={{ opacity: 0.85, scale: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
@@ -240,17 +160,11 @@ function Hero() {
           />
         </AnimatePresence>
 
-        {/* 
-          2 & 3. Lighter directional gradient: 
-          - from-slate-950 (Dark at the very bottom to anchor the overlapping portals)
-          - via-slate-950/40 (Much lighter in the center so the image breathes)
-          - to-slate-950/30 (Slight tint at the top for navbar contrast)
-        */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-slate-950/30" />
       </div>
 
-      {/* Hero Content (Maintained as-is) */}
-      <div className="relative z-10 text-center px-4 sm:px-6 pt-24 pb-20 lg:pt-32 lg:pb-28">
+      {/* Hero Content - Adjusted mobile padding */}
+      <div className="relative z-10 text-center px-4 sm:px-6 pt-16 pb-24 lg:pt-32 lg:pb-32">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -272,16 +186,17 @@ function Hero() {
             solutions to live events and media production.
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          {/* Dual Action Funnel - Adjusted for mobile stacking */}
+          <div className="mt-8 lg:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 w-full px-4 sm:px-0">
             <a
               href="#tech"
-              className="w-full sm:w-auto px-8 py-3.5 rounded-md bg-white text-corporate font-bold text-lg hover:bg-slate-100 transition-all duration-300 shadow-lg hover:-translate-y-0.5"
+              className="w-full sm:w-auto text-center px-8 py-4 rounded-xl bg-white text-corporate font-bold text-lg hover:bg-slate-100 transition-all duration-300 shadow-lg"
             >
               Explore Tech
             </a>
             <a
               href="#media"
-              className="w-full sm:w-auto px-8 py-3.5 rounded-md bg-vibrant text-white font-bold text-lg hover:bg-rose-700 transition-all duration-300 shadow-lg shadow-vibrant/25 hover:-translate-y-0.5"
+              className="w-full sm:w-auto text-center px-8 py-4 rounded-xl bg-vibrant text-white font-bold text-lg hover:bg-rose-700 transition-all duration-300 shadow-lg shadow-vibrant/25"
             >
               Explore Media
             </a>
@@ -294,8 +209,8 @@ function Hero() {
 
 function DivisionSplit() {
   return (
-    // Keep the cards clear of the Hero action buttons while preserving the overlap
-    <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 lg:-mt-16 mb-24">
+    // Scaled negative margin across breakpoints to prevent cards from covering hero text on mobile
+    <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 sm:-mt-24 lg:-mt-32 mb-16 lg:mb-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         <TechPortal />
         <MediaPortal />
@@ -314,7 +229,6 @@ function TechPortal() {
       whileHover={{ y: -8 }}
       className="group relative flex flex-col justify-between bg-corporate p-10 sm:p-12 rounded-3xl shadow-2xl overflow-hidden border border-white/10"
     >
-      {/* Decorative Background Element */}
       <div className="absolute -top-12 -right-12 text-white/5 group-hover:text-white/10 group-hover:rotate-12 transition-all duration-700 pointer-events-none">
         <Zap size={240} strokeWidth={1} />
       </div>
@@ -350,7 +264,6 @@ function MediaPortal() {
       whileHover={{ y: -8 }}
       className="group relative flex flex-col justify-between bg-rose-50 p-10 sm:p-12 rounded-3xl shadow-2xl overflow-hidden border border-slate-100"
     >
-      {/* Decorative Background Element */}
       <div className="absolute -top-12 -right-12 text-slate-50 group-hover:text-slate-100 group-hover:-rotate-12 transition-all duration-700 pointer-events-none">
         <Mic size={240} strokeWidth={1} />
       </div>
@@ -406,90 +319,12 @@ function SectionHeading({ eyebrow, title, description, dark }) {
   );
 }
 
-// function TechSection() {
-//   return (
-//     // The scroll-mt-24 class offsets the jump to account for the sticky navbar height
-//     <section
-//       id="tech"
-//       className="scroll-mt-20 bg-corporate text-white px-4 sm:px-6 lg:px-8 py-24"
-//     >
-//       <div className="max-w-5xl mx-auto">
-//         <SectionHeading
-//           dark
-//           eyebrow="AIS Tech Services & Sales"
-//           title="ICT solutions for businesses and individuals"
-//           description="Wherever you are, we have got you covered — sales, consulting, and installation across hardware, networking, and cloud."
-//         />
-//         <motion.div
-//           initial="hidden"
-//           whileInView="visible"
-//           viewport={{ once: true, margin: "0px 0px -15% 0px" }}
-//           variants={staggerContainer}
-//           className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/10 border border-white/10 mb-16 rounded-xl overflow-hidden"
-//         >
-//           {techServices.map(({ title, description, icon: Icon }) => (
-//             <motion.div
-//               variants={fadeUp}
-//               key={title}
-//               className="bg-corporate p-8 hover:bg-corporate/90 transition-colors"
-//             >
-//               <div className="w-12 h-12 flex items-center justify-center border border-white/25 rounded-lg mb-6 bg-white/5">
-//                 <Icon size={22} className="text-vibrant" strokeWidth={2.25} />
-//               </div>
-//               <h3 className="text-xl font-bold mb-3">{title}</h3>
-//               <p className="text-slate-300 leading-relaxed">{description}</p>
-//             </motion.div>
-//           ))}
-//         </motion.div>
-//       </div>
-//     </section>
-//   );
-// }
-
-// function MediaSection() {
-//   return (
-//     <section
-//       id="media"
-//       className="scroll-mt-20 bg-white px-4 sm:px-6 lg:px-8 py-24 border-t border-slate-100"
-//     >
-//       <div className="max-w-5xl mx-auto">
-//         <SectionHeading
-//           eyebrow="AIS Media"
-//           title="Audio-visual production for the moment that doesn't get a retake"
-//           description="Top-notch media services, from intimate family gatherings to large corporate events."
-//         />
-//         <motion.div
-//           initial="hidden"
-//           whileInView="visible"
-//           viewport={{ once: true, margin: "0px 0px -15% 0px" }}
-//           variants={staggerContainer}
-//           className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-slate-200 border border-slate-200 mb-16 rounded-xl overflow-hidden"
-//         >
-//           {mediaServices.map(({ title, description, icon: Icon }) => (
-//             <motion.div
-//               variants={fadeUp}
-//               key={title}
-//               className="bg-white p-8 hover:bg-slate-50 transition-colors"
-//             >
-//               <div className="w-12 h-12 flex items-center justify-center border border-vibrant/30 rounded-lg mb-6 bg-vibrant/5">
-//                 <Icon size={22} className="text-vibrant" strokeWidth={2.25} />
-//               </div>
-//               <h3 className="text-xl font-bold text-slate-900 mb-3">{title}</h3>
-//               <p className="text-slate-700 leading-relaxed">{description}</p>
-//             </motion.div>
-//           ))}
-//         </motion.div>
-//       </div>
-//     </section>
-//   );
-// }
-
 function TechSection() {
   return (
-    // Added 'relative' and increased bottom padding (pb-32 lg:pb-40) to make room for the slant
+    // Adjusted padding for mobile (pt-16 pb-24) while preserving desktop sizing
     <section
       id="tech"
-      className="relative scroll-mt-20 bg-corporate text-white px-4 sm:px-6 lg:px-8 pt-24 pb-32 lg:pb-40"
+      className="relative scroll-mt-20 bg-corporate text-white px-4 sm:px-6 lg:px-8 pt-16 pb-24 lg:pt-24 lg:pb-40"
     >
       <div className="relative z-10 max-w-5xl mx-auto">
         <SectionHeading
@@ -522,7 +357,6 @@ function TechSection() {
         </motion.div>
       </div>
 
-      {/* The Diagonal SVG Shape Divider */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0 translate-y-[1px]">
         <svg
           className="relative block w-full h-[60px] md:h-[120px]"
@@ -530,7 +364,6 @@ function TechSection() {
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
         >
-          {/* The fill-white class perfectly matches the bg-white of the Media section below it */}
           <path d="M1200 120H0V0l1200 120z" className="fill-white" />
         </svg>
       </div>
@@ -540,7 +373,6 @@ function TechSection() {
 
 function MediaSection() {
   return (
-    // Removed the 'border-t border-slate-100' so it seamlessly connects to the white SVG slant above it
     <section
       id="media"
       className="scroll-mt-20 bg-white px-4 sm:px-6 lg:px-8 py-16 lg:py-24"
@@ -578,43 +410,21 @@ function MediaSection() {
   );
 }
 
-// function ContactSection() {
-//   return (
-//     <section
-//       id="contact"
-//       className="scroll-mt-20 px-4 sm:px-6 lg:px-8 py-24 bg-slate-50"
-//     >
-//       <div className="max-w-5xl mx-auto">
-//         <motion.div
-//           initial="hidden"
-//           whileInView="visible"
-//           viewport={{ once: true, margin: "0px 0px -15% 0px" }}
-//           variants={staggerContainer}
-//           className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-slate-200 border border-slate-200 rounded-xl overflow-hidden shadow-sm"
-//         >
-//           {/* Contact cards remain the same */}
-//         </motion.div>
-//       </div>
-//     </section>
-//   );
-// }
-
 function ContactSection() {
   return (
+    // Adjusted padding for mobile (py-16)
     <section
       id="contact"
-      className="scroll-mt-20 px-4 sm:px-6 lg:px-8 py-24 bg-slate-50"
+      className="scroll-mt-20 px-4 sm:px-6 lg:px-8 py-16 lg:py-24 bg-slate-50"
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* --- Left Column: Story & Direct Contact Cards --- */}
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "0px 0px -15% 0px" }}
             variants={staggerContainer}
           >
-            {/* The Story */}
             <motion.div variants={fadeUp} className="mb-12">
               <p className="text-sm font-bold uppercase tracking-wider mb-3 text-vibrant">
                 Our story
@@ -635,7 +445,6 @@ function ContactSection() {
               </div>
             </motion.div>
 
-            {/* The Contact Cards (Now stacked 2x2 for a cleaner fit) */}
             <motion.div
               variants={fadeUp}
               className="grid grid-cols-1 sm:grid-cols-2 gap-4"
@@ -674,7 +483,6 @@ function ContactSection() {
             </motion.div>
           </motion.div>
 
-          {/* --- Right Column: The WhatsApp Form --- */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -682,10 +490,6 @@ function ContactSection() {
             variants={fadeUp}
             className="lg:pl-8"
           >
-            {/* 
-              If you pasted the WhatsAppForm code directly into Home.jsx, 
-              leave this as <WhatsAppForm />. Otherwise, ensure it's imported.
-            */}
             <WhatsAppForm />
           </motion.div>
         </div>

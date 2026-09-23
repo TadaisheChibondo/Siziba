@@ -61,36 +61,29 @@ const Navbar = () => {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden border-t border-gray-50 bg-white">
-          <div className="px-4 pt-2 pb-4 space-y-2">
-            <Link
-              to="/"
+        <div className="md:hidden absolute top-16 left-0 w-full border-t border-slate-100 bg-white/95 backdrop-blur-md shadow-lg">
+          <div className="px-4 pt-4 pb-6 space-y-3">
+            <a
+              href="#tech"
               onClick={() => setIsOpen(false)}
-              className="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md"
-            >
-              Home
-            </Link>
-            <Link
-              to="/tech"
-              onClick={() => setIsOpen(false)}
-              className="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md"
+              className="block px-4 py-3 text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-corporate rounded-lg transition-colors"
             >
               Tech & Sales
-            </Link>
-            <Link
-              to="/media"
+            </a>
+            <a
+              href="#media"
               onClick={() => setIsOpen(false)}
-              className="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md"
+              className="block px-4 py-3 text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-vibrant rounded-lg transition-colors"
             >
               Media Services
-            </Link>
-            <Link
-              to="/contact"
+            </a>
+            <a
+              href="#contact"
               onClick={() => setIsOpen(false)}
-              className="block w-full text-left px-3 py-2 text-base font-medium text-corporate hover:bg-gray-50 rounded-md"
+              className="block px-4 py-3 text-base font-semibold text-slate-700 hover:bg-slate-50 rounded-lg transition-colors"
             >
-              Contact Us
-            </Link>
+              Our Story
+            </a>
           </div>
         </div>
       )}
