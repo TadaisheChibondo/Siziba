@@ -7,9 +7,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           {/* Brand Info */}
           <div className="col-span-1 md:col-span-2">
-            <span className="text-2xl font-extrabold text-white tracking-tight">
-              Abizis
-            </span>
+            <img
+              src="/images/logo.jpg"
+              alt="Abizis Innovative Solutions"
+              className="h-12 w-auto object-contain bg-white p-1 rounded-sm"
+            />
             <p className="mt-4 text-slate-400 max-w-sm leading-relaxed">
               Technology that works. Experiences people remember. Delivering
               professional ICT solutions and top-notch audio-visual production

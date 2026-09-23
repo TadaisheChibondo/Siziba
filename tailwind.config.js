@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        corporate: "#0f172a", // Dark blue for Tech
-        vibrant: "#e11d48", // Energetic red/pink for Media
+        corporate: "#003893", // The deep blue from the 'ais' text
+        vibrant: "#ED1C24", // The bright red from the company name
       },
     },
   },
