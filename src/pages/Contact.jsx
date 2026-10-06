@@ -51,7 +51,7 @@ const Contact = () => {
 
         {/* Email Card */}
         <a
-          href="mailto:info@abizis.com" // Replace with actual email
+          href="mailto:info@abizis.co.zw" // Replace with actual email
           className="flex flex-col items-center text-center p-8 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group"
         >
           <div className="bg-rose-50 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-vibrant group-hover:text-white transition-colors text-vibrant">
