@@ -73,7 +73,7 @@ const mediaServices = [
     icon: MonitorPlay,
   },
   {
-    title: "Livestreaming",
+    title: "Livestreaming And Videography",
     description:
       "Multi-camera setups, crisp audio feeds, and reliable streaming architecture to broadcast your event globally.",
     icon: Video,
