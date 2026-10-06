@@ -412,7 +412,6 @@ function MediaSection() {
 
 function ContactSection() {
   return (
-    // Adjusted padding for mobile (py-16)
     <section
       id="contact"
       className="scroll-mt-20 px-4 sm:px-6 lg:px-8 py-16 lg:py-24 bg-slate-50"
@@ -445,6 +444,7 @@ function ContactSection() {
               </div>
             </motion.div>
 
+            {/* Updated Contact Cards: Call and WhatsApp */}
             <motion.div
               variants={fadeUp}
               className="grid grid-cols-1 sm:grid-cols-2 gap-4"
@@ -466,23 +466,26 @@ function ContactSection() {
               </a>
 
               <a
-                href="mailto:info@abizis.co.zw"
+                href="https://wa.me/263776414650"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex flex-col items-start gap-4 bg-white p-6 rounded-xl border border-slate-200 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-colors duration-200"
               >
-                <Mail
+                <MessageCircle
                   size={24}
-                  className="text-corporate group-hover:text-vibrant transition-colors"
+                  className="text-green-500 group-hover:text-green-400 transition-colors"
                 />
                 <div>
-                  <h3 className="text-lg font-bold mb-1">Email us</h3>
+                  <h3 className="text-lg font-bold mb-1">WhatsApp</h3>
                   <p className="text-sm text-slate-500 group-hover:text-slate-300">
-                    Drop us a line anytime
+                    Message us for quick replies
                   </p>
                 </div>
               </a>
             </motion.div>
           </motion.div>
 
+          {/* Replaced WhatsAppForm with EmailForm */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -490,7 +493,7 @@ function ContactSection() {
             variants={fadeUp}
             className="lg:pl-8"
           >
-            <WhatsAppForm />
+            <EmailForm />
           </motion.div>
         </div>
       </div>

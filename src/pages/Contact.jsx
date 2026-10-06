@@ -39,7 +39,7 @@ const Contact = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Phone Card */}
         <a
-          href="tel:+263717562359" // Replace with actual phone number
+          href="tel:+263717562359"
           className="flex flex-col items-center text-center p-8 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group"
         >
           <div className="bg-blue-50 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-corporate group-hover:text-white transition-colors text-corporate">
@@ -51,7 +51,7 @@ const Contact = () => {
 
         {/* Email Card */}
         <a
-          href="mailto:info@abizis.co.zw" // Replace with actual email
+          href="mailto:info@abizis.co.zw"
           className="flex flex-col items-center text-center p-8 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group"
         >
           <div className="bg-rose-50 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-vibrant group-hover:text-white transition-colors text-vibrant">
@@ -63,7 +63,7 @@ const Contact = () => {
 
         {/* WhatsApp Card */}
         <a
-          href="https://wa.me/263776414650" // Replace with actual number
+          href="https://wa.me/263776414650"
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center text-center p-8 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group"
