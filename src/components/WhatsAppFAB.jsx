@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 
 const WhatsAppFAB = () => {
   // Replace with the client's actual WhatsApp number (include country code, no '+')
-  const phoneNumber = "263700000000";
+  const phoneNumber = "263717562359";
   const defaultMessage = encodeURIComponent(
     "Hi Abizis, I'm interested in learning more about your services.",
   );

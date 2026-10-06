@@ -16,7 +16,7 @@ const WhatsAppForm = () => {
     e.preventDefault();
 
     // Ensure the number includes the 263 country code without the '+' symbol
-    const phoneNumber = "263700000000";
+    const phoneNumber = "263717562359";
 
     // Formatting the message with WhatsApp markdown (asterisks for bold text)
     const text = `*New Website Inquiry*\n\n*Name:* ${formData.name}\n*Interested In:* ${formData.division}\n\n*Message:*\n${formData.message}`;
