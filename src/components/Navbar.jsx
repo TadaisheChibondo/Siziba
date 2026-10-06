@@ -27,24 +27,27 @@ const Navbar = () => {
             >
               Home
             </Link>
-            <Link
-              to="/#"
+            <a
+              href="#tech"
+              onClick={() => setIsOpen(false)}
               className="text-sm font-medium text-gray-600 hover:text-corporate transition"
             >
               Tech & Sales
-            </Link>
-            <Link
-              to="/#"
+            </a>
+            <a
+              href="#media"
+              onClick={() => setIsOpen(false)}
               className="text-sm font-medium text-gray-600 hover:text-vibrant transition"
             >
               Media Services
-            </Link>
-            <Link
-              to="/#"
+            </a>
+            <a
+              href="#contact"
+              onClick={() => setIsOpen(false)}
               className="bg-corporate text-gray-600 text-sm font-medium px-4 py-2 rounded-lg hover:bg-slate-800 transition"
             >
               Contact Us
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -63,6 +66,13 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden absolute top-16 left-0 w-full border-t border-slate-100 bg-white/95 backdrop-blur-md shadow-lg">
           <div className="px-4 pt-4 pb-6 space-y-3">
+            <Link
+              to="/"
+              onClick={() => setIsOpen(false)}
+              className="block px-4 py-3 text-base font-semibold text-slate-700 hover:bg-slate-50 rounded-lg transition-colors"
+            >
+              Home
+            </Link>
             <a
               href="#tech"
               onClick={() => setIsOpen(false)}
@@ -82,7 +92,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className="block px-4 py-3 text-base font-semibold text-slate-700 hover:bg-slate-50 rounded-lg transition-colors"
             >
-              Our Story
+              Contact Us
             </a>
           </div>
         </div>
