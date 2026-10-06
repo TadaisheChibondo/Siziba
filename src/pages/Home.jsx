@@ -120,7 +120,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="w-full bg-white">
+    <div id="top" className="w-full bg-white">
       <Hero />
       <DivisionSplit />
       <TechSection />

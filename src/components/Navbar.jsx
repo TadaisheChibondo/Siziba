@@ -20,13 +20,13 @@ const Navbar = () => {
           </div>
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link
-              to="/"
+            <a
+              href="#top"
               onClick={() => setIsOpen(false)}
               className="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md"
             >
               Home
-            </Link>
+            </a>
             <a
               href="#tech"
               onClick={() => setIsOpen(false)}
@@ -66,13 +66,13 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden absolute top-16 left-0 w-full border-t border-slate-100 bg-white/95 backdrop-blur-md shadow-lg">
           <div className="px-4 pt-4 pb-6 space-y-3">
-            <Link
-              to="/"
+            <a
+              href="#top"
               onClick={() => setIsOpen(false)}
               className="block px-4 py-3 text-base font-semibold text-slate-700 hover:bg-slate-50 rounded-lg transition-colors"
             >
               Home
-            </Link>
+            </a>
             <a
               href="#tech"
               onClick={() => setIsOpen(false)}
