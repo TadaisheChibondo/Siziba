@@ -39,7 +39,7 @@ const Contact = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Phone Card */}
         <a
-          href="tel:+263776414650" // Replace with actual number
+          href="tel:+263717562359" // Replace with actual phone number
           className="flex flex-col items-center text-center p-8 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group"
         >
           <div className="bg-blue-50 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-corporate group-hover:text-white transition-colors text-corporate">
