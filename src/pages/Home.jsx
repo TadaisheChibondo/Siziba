@@ -15,8 +15,9 @@ import {
   Mail,
   Calendar,
   ArrowRight,
+  MessageCircle,
 } from "lucide-react";
-import WhatsAppForm from "./WhatsAppForm";
+import EmailForm from "../components/EmailForm";
 
 // Existing features and services arrays remain unchanged
 const techFeatures = [
