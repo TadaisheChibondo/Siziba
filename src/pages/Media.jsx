@@ -90,7 +90,7 @@ const Media = () => {
           and get a custom quote for your event.
         </p>
         <a
-          href="mailto:info@abizis.com?subject=Inquiry:%20AIS%20Media%20Booking"
+          href="mailto:info@abizis.co.zw?subject=Inquiry:%20AIS%20Media%20Booking"
           className="inline-flex items-center space-x-2 bg-vibrant text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-rose-700 transition"
         >
           <Mail size={20} />

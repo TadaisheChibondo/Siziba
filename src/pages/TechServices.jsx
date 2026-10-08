@@ -71,7 +71,7 @@ const TechServices = () => {
           or consulting needs.
         </p>
         <a
-          href="mailto:info@abizis.com?subject=Inquiry:%20Tech%20Services%20&%20Sales"
+          href="mailto:info@abizis.co.zw?subject=Inquiry:%20Tech%20Services%20&%20Sales"
           className="inline-flex items-center space-x-2 bg-corporate text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-800 transition"
         >
           <Mail size={20} />

@@ -17,7 +17,7 @@ import {
   ArrowRight,
   MessageCircle,
 } from "lucide-react";
-import EmailForm from "../components/EmailForm";
+import EmailForm from "../components/EmailForm7";
 
 // Existing features and services arrays remain unchanged
 const techFeatures = [
@@ -451,7 +451,7 @@ function ContactSection() {
               className="grid grid-cols-1 sm:grid-cols-2 gap-4"
             >
               <a
-                href="tel:+263717562359"
+                href="tel:+263717569362"
                 className="group flex flex-col items-start gap-4 bg-white p-6 rounded-xl border border-slate-200 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-colors duration-200"
               >
                 <Phone
@@ -467,7 +467,7 @@ function ContactSection() {
               </a>
 
               <a
-                href="https://wa.me/263776414650"
+                href="https://wa.me/263717562359"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col items-start gap-4 bg-white p-6 rounded-xl border border-slate-200 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-colors duration-200"

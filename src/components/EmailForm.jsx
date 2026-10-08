@@ -19,7 +19,7 @@ const EmailForm = () => {
     setStatus("submitting");
 
     // Replace this with the free access key from Web3Forms
-    const accessKey = "YOUR_WEB3FORMS_ACCESS_KEY";
+    const accessKey = "b01c5558-1fe6-4086-809e-9a2f90c77525";
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
