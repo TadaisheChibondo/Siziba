@@ -18,7 +18,7 @@ const EmailForm = () => {
     e.preventDefault();
     setStatus("submitting");
 
-    // Replace this with the free access key from Web3Forms
+    // 1. MAKE SURE TO PASTE THE REAL KEY HERE
     const accessKey = "b01c5558-1fe6-4086-809e-9a2f90c77525";
 
     try {
@@ -37,6 +37,7 @@ const EmailForm = () => {
       });
 
       const result = await response.json();
+
       if (result.success) {
         setStatus("success");
         setFormData({
@@ -45,9 +46,16 @@ const EmailForm = () => {
           division: "Tech Services",
           message: "",
         });
+      } else {
+        // This catches API errors (like an invalid Access Key) so it doesn't freeze
+        console.error("Web3Forms API Error:", result.message);
+        alert(`Could not send message: ${result.message}`);
+        setStatus("idle");
       }
     } catch (error) {
-      console.error(error);
+      // This catches network/internet errors
+      console.error("Network Error:", error);
+      alert("A network error occurred. Please try again.");
       setStatus("idle");
     }
   };
