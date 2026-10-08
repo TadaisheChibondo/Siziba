@@ -17,7 +17,7 @@ import {
   ArrowRight,
   MessageCircle,
 } from "lucide-react";
-import EmailForm from "../components/EmailForm7";
+import EmailForm from "../components/EmailForm";
 
 // Existing features and services arrays remain unchanged
 const techFeatures = [
